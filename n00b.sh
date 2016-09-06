@@ -401,7 +401,7 @@ function menu(){
 		echo -e "  \e[94m0)     Exit\e[0m" && sleep 0.2
 		echo
 		fi
-		printf "\n Selection · "
+		printf " Selection · "
 		read SELEC
 
 		if [ $SELEC == 1 ]; then
@@ -475,9 +475,9 @@ monitormode=0
 aircrack_check=0
 CSVDB=list-01.csv
 temporal="./temporal"
-checkdir='$(ls /opt | grep n00b)'
+# checkdir='$(ls /opt | grep n00b)'       ----       I don't even know why
 
-if [ $checkdir == "" ]; then
+if [ $handshakescheck == "" ]; then
 	dircreated=0
 else
 	dircreated=1
