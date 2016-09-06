@@ -2,7 +2,6 @@
 
 function create_folders(){
 	if [ $dircreated == 0 ]; then
-		mkdir /opt/n00b
 		mkdir /opt/n00b/Dictionaries
 		mkdir /opt/n00b/Handshakes
 		mkdir /opt/n00b/Handshakes/Clean
@@ -395,13 +394,12 @@ function menu(){
 			echo -e "  \e[92m6) Create necessary folders\e[0m"
 		else
 			echo -e "  \e[91m6) Create necessary folders\e[0m"
-
+		fi
 		echo -e "\e[94m------------------------------------------\e[0m" && sleep 0.2
 		echo -e "  \e[94m9) Run AutoShutdown function (Optional)\e[0m" && sleep 0.2
 		echo -e "  \e[94m0)     Exit\e[0m" && sleep 0.2
 		echo
-		fi
-		printf " Selection · "
+		printf "\n Selection · "
 		read SELEC
 
 		if [ $SELEC == 1 ]; then
