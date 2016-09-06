@@ -2,27 +2,25 @@
 
 function create_folders(){
 	if [ $dircreated == 0 ]; then
-		mkdir /opt/n00b/Dictionaries
-		mkdir /opt/n00b/Handshakes
-		mkdir /opt/n00b/Handshakes/Clean
-		mkdir /opt/n00b/Handshakes/HCCap
-		mkdir /opt/n00b/temporal
-		mv n00b.sh /opt/n00b/
-		cd /opt/n00b/
-		menu
+		mkdir Dictionaries
+		mkdir Handshakes
+		mkdir Handshakes/Clean
+		mkdir Handshakes/HCCap
+		mkdir temporal
+		dircreated=1
 	elif [ $dircreated == 1 ]; then
 		echo -e "\nThe directory is already created" && sleep 1
 		echo -e "\nRe-create?"
 		printf "Y/N · "
 		read recreatedir
 		if [ "$recreatedir" == "Y" ]; then
-			rm -rf /opt/n00b
+			rm -rf Dictionaries Handshakes temporal
 			dircreated=0
 			create_folders
+			dircreated=1
 		elif [ "$recreatedir" == "N" ]; then
 			echo -e "\nReturning to the menu" && sleep 1.5
 			clear
-			menu
 		else
 			echo -e "\nInvalid option, please use caps" && sleep 1.5
 			clear
@@ -398,7 +396,6 @@ function menu(){
 		echo -e "\e[94m------------------------------------------\e[0m" && sleep 0.2
 		echo -e "  \e[94m9) Run AutoShutdown function (Optional)\e[0m" && sleep 0.2
 		echo -e "  \e[94m0)     Exit\e[0m" && sleep 0.2
-		echo
 		printf "\n Selection · "
 		read SELEC
 
@@ -473,12 +470,11 @@ monitormode=0
 aircrack_check=0
 CSVDB=list-01.csv
 temporal="./temporal"
-# checkdir='$(ls /opt | grep n00b)'       ----       I don't even know why
+# checkdir='$(ls /opt | grep n00b)'
 
-if [ $handshakescheck == "" ]; then
+if [[ "x$handshakescheck" == "x" ]]; then
 	dircreated=0
 else
 	dircreated=1
 fi
-
 menu
