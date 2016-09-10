@@ -12,7 +12,8 @@ function create_folders(){
 		echo -e "\nThe directory is already created" && sleep 1
 		echo -e "\nRe-create?"
 		printf "Y/N · "
-		read recreatedir
+		read bimbambun
+		recreatedir=${bimbambun^^}
 		if [ "$recreatedir" == "Y" ]; then
 			rm -rf Dictionaries Handshakes temporal
 			dircreated=0
