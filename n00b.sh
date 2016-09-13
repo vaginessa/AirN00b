@@ -64,7 +64,7 @@ function interface_prepare(){
 		NEWMONAME="$(iwconfig 2>&1 | grep Monitor | awk '{print $1}')"
 		clear
 		echo
-		echo "   Using interface $NEWMONAME -hic-" && sleep 1
+		echo "   Using interface $NEWMONAME" && sleep 1
 		echo
 		printf "   Enter to continue..."
 		read CYKA
@@ -74,7 +74,7 @@ function interface_prepare(){
 		airmon-ng stop $MONAME
 		clear
 		echo
-		echo "   Restarting function -hic-" && sleep 2
+		echo "   Restarting function" && sleep 2
 		interface_prepare
 	fi
 }
@@ -447,7 +447,8 @@ function menu(){
 			fi
 		else
 			clear
-			echo "WTF NIGGER THATS NOT AN OPTION"
+			echo -e "Invalid input, try again\nEnter To Continue..."
+			read CYKA
 		fi
 	done
 }
