@@ -349,40 +349,40 @@ function menu(){
 	while true; do
 		resize -s 22 42
 		clear
-		echo -e "\e[1m\e[36m|\    | ___  ___  __" && sleep 0.2
-		echo -e "| \   ||   ||   ||  )" && sleep 0.2
-		echo -e "|  \  ||   ||   ||-<" && sleep 0.2
-		echo -e "|   \ ||   ||   ||  \ " && sleep 0.2
-		echo -e "|    \||___||___||___)\e[21m Script.sh" && sleep 0.2
-		echo -e "Made by Capuno under GPL v3 license\e[0m" && sleep 0.2
+		echo -e "\e[1m\e[36m|\    | ___  ___  __" && sleep 0.1
+		echo -e "| \   ||   ||   ||  )" && sleep 0.1
+		echo -e "|  \  ||   ||   ||-<" && sleep 0.1
+		echo -e "|   \ ||   ||   ||  \ " && sleep 0.1
+		echo -e "|    \||___||___||___)\e[21m Script.sh" && sleep 0.1
+		echo -e "Made by Capuno under GPL v3 license\e[0m" && sleep 0.1
 		echo
-		echo -e "      \e[1m\e[91mRED: Not done\e[0m\e[21m    \e[1m\e[92mGREEN: Done\e[0m\e[21m" && sleep 0.2
+		echo -e "      \e[1m\e[91mRED: Not done\e[0m\e[21m    \e[1m\e[92mGREEN: Done\e[0m\e[21m" && sleep 0.1
 		echo
-		echo -e " \e[36mSelect an option:\e[0m" && sleep 0.2
+		echo -e " \e[36mSelect an option:\e[0m" && sleep 0.1
 		echo
 		if [ $aircrack_check == 1 ]; then
-			echo -e "  \e[92m1) Check aircrack-ng dependencies\e[0m" && sleep 0.2
+			echo -e "  \e[92m1) Check aircrack-ng dependencies\e[0m" && sleep 0.1
 		else
-			echo -e "  \e[91m1) Check aircrack-ng dependencies\e[0m" && sleep 0.2
+			echo -e "  \e[91m1) Check aircrack-ng dependencies\e[0m" && sleep 0.1
 		fi
 		if [ $monitormode == 1 ]; then
-			echo -e "  \e[92m2) Prepare interface on monitor mode\e[0m" && sleep 0.2
+			echo -e "  \e[92m2) Prepare interface on monitor mode\e[0m" && sleep 0.1
 		else
-			echo -e "  \e[91m2) Prepare interface on monitor mode\e[0m" && sleep 0.2
+			echo -e "  \e[91m2) Prepare interface on monitor mode\e[0m" && sleep 0.1
 		fi
 		if [ $managedmode == 1 ]; then
-			echo -e "  \e[92m3) Prepare interface on managed mode\e[0m" && sleep 0.2
+			echo -e "  \e[92m3) Prepare interface on managed mode\e[0m" && sleep 0.1
 		else
-			echo -e "  \e[91m3) Prepare interface on managed mode\e[0m" && sleep 0.2
+			echo -e "  \e[91m3) Prepare interface on managed mode\e[0m" && sleep 0.1
 		fi
 		if [ $monitormode == 1 ]; then
 			if [ $airmondone == 1 ]; then
-				echo -e "  \e[92m4) Run airodump-ng\e[0m" && sleep 0.2
+				echo -e "  \e[92m4) Run airodump-ng\e[0m" && sleep 0.1
 			else
-				echo -e "  \e[91m4) Run airodump-ng\e[0m" && sleep 0.2
+				echo -e "  \e[91m4) Run airodump-ng\e[0m" && sleep 0.1
 			fi
 		else
-			echo -e "  \e[91m4) Run airodump-ng (Run first option 2)\e[0m" && sleep 0.2
+			echo -e "  \e[91m4) Run airodump-ng (Run first option 2)\e[0m" && sleep 0.1
 		fi
 		if [ $chashcatdone == 1 ]; then
 			echo -e "  \e[92m5) Run cudaHashcat\e[0m"
@@ -394,9 +394,9 @@ function menu(){
 		else
 			echo -e "  \e[91m6) Create necessary folders\e[0m"
 		fi
-		echo -e "\e[94m------------------------------------------\e[0m" && sleep 0.2
-		echo -e "  \e[94m9) Run AutoShutdown function (Optional)\e[0m" && sleep 0.2
-		echo -e "  \e[94m0)     Exit\e[0m" && sleep 0.2
+		echo -e "\e[94m------------------------------------------\e[0m" && sleep 0.1
+		echo -e "  \e[94m9) Run AutoShutdown function (Optional)\e[0m" && sleep 0.1
+		echo -e "  \e[94m0)     Exit\e[0m" && sleep 0.1
 		printf "\n Selection · "
 		read SELEC
 
